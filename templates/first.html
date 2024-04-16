@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("{{url_for('static',filename='luffy.jpg')}}");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .welcome-container {
+      display: inline;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 0px;
+      background-color: rgba(255, 255, 255, 0.103);
+      border-radius: 10px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  
+    h1 {
+      color: #fff;
+      font-size: 5em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #fff;
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .get-started-button {
+      margin-top: auto; /* Aligns the button to the bottom */
+      margin-bottom: 20px; /* Adds some space between the button and the bottom */
+    }
+    
+    /* Custom CSS to change the color of "ADEPT" */
+    .welcome-message h1 span {
+      color: #f833ff;
+      font-size: 2em; /* Increase the font size */
+    }
+
+    .welcome-message p {
+        color: #faf7fa;
+      font-size: 2em; /* Increase the font size */
+    }
+
+    .buttons {
+      display: flex;
+      justify-content:space-around; /* Adjusted space between buttons */
+    }
+  
+    button {
+      padding: 2000px 4000px; /* Increase padding for larger button size */
+      margin:0; /* Removed margin between buttons */
+      font-size: 2em; /* Increase the font size */
+      border: none;
+      border-radius: 100px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    button:hover {
+      background-color: #0a73dd;
+    }
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-container">
+      <div class="content">
+        <h1>Welcome to <span>ADEPT</span></h1>
+        <p>We're glad you're here!</p>
+      </div>
+      <div class="button">
+        <a href="/login" class="btn btn-primary get-started-button">post job</a>
+        <a href="/home" class="btn btn-primary get-started-button">browse job</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (optional, if you need JavaScript functionality) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
